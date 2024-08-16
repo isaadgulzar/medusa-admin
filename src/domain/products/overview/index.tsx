@@ -15,7 +15,7 @@ import ProductTable from "../../../components/templates/product-table"
 import useNotification from "../../../hooks/use-notification"
 import useToggleState from "../../../hooks/use-toggle-state"
 import { getErrorMessage } from "../../../utils/error-messages"
-import ImportProducts from "../batch-job/import"
+import ImportProducts from "../batch-job/import-new"
 import NewProduct from "../new"
 import { PollingContext } from "../../../context/polling"
 
@@ -65,7 +65,7 @@ const Overview = () => {
             <Button
               variant="secondary"
               size="small"
-              onClick={() => openImportModal()}
+              onClick={() => navigate('/a/products/import')}
             >
               <UploadIcon size={20} />
               Import Products

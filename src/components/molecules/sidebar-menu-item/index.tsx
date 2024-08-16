@@ -25,8 +25,8 @@ const SidebarMenuItem: React.FC<SidebarMenuItemProps> & {
   subItems = [],
 }: SidebarMenuItemProps) => {
   const styles =
-    "group py-1.5 my-0.5 rounded-rounded flex text-grey-50 hover:bg-grey-10 items-center px-2"
-  const activeStyles = "bg-grey-10 is-active"
+    "group py-1.5 my-0.5 flex text-white hover:bg-hex-44 items-center px-5 text-sm"
+  const activeStyles = "bg-hex-44 is-active"
   const classNameFn = useCallback(
     ({ isActive }) => (isActive ? `${styles} ${activeStyles}` : styles),
     []
@@ -40,7 +40,7 @@ const SidebarMenuItem: React.FC<SidebarMenuItemProps> & {
       trigger={
         <NavLink className={classNameFn} to={pageLink}>
           <span className="items-start">{icon}</span>
-          <span className="ml-3 group-[.is-active]:text-grey-90">{text}</span>
+          <span className="ml-3 group-[.is-active]:text-white">{text}</span>
         </NavLink>
       }
     >
@@ -53,8 +53,8 @@ const SidebarMenuItem: React.FC<SidebarMenuItemProps> & {
 }
 
 const SubItem = ({ pageLink, text }: SidebarMenuSubitemProps) => {
-  const styles = "py-0.5 px-1 my-0.5 rounded-base flex hover:bg-grey-10"
-  const activeStyles = "bg-grey-10 font-semibold"
+  const styles = "py-2 px-10 flex hover:bg-hex-44"
+  const activeStyles = "bg-hex-44 font-semibold"
   const classNameFn = useCallback(
     ({ isActive }) => (isActive ? `${styles} ${activeStyles}` : styles),
     []
@@ -62,7 +62,7 @@ const SubItem = ({ pageLink, text }: SidebarMenuSubitemProps) => {
 
   return (
     <NavLink className={classNameFn} to={pageLink}>
-      <span className="ml-3 text-grey-90 text-small">{text}</span>
+      <span className="ml-3 text-white text-sm">{text}</span>
     </NavLink>
   )
 }

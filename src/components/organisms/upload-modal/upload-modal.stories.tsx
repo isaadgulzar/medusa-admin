@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react"
 import React from "react"
 
-import UploadModal from "./"
+import UploadModal from "./index-new"
 
 export default {
   title: "Organisms/UploadModal",

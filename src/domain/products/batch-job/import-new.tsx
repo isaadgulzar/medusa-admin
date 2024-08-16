@@ -10,7 +10,7 @@ import {
   useAdminUploadProtectedFile,
 } from "medusa-react"
 
-import UploadModal from "../../../components/organisms/upload-modal"
+import UploadModal from "../../../components/organisms/upload-modal/index-new"
 import useNotification from "../../../hooks/use-notification"
 import { PollingContext } from "../../../context/polling"
 
@@ -40,6 +40,7 @@ function useImportBatchJob(batchJobId?: string) {
  */
 type ImportProductsProps = {
   handleClose: () => void
+  setCsvFile: (file: File) => void
 }
 
 /**
@@ -109,6 +110,7 @@ function ImportProducts(props: ImportProductsProps) {
       resetInterval()
 
       setBatchJobId(batchJob.batch_job.id)
+      props.setCsvFile(file)
     } catch (e) {
       notification("Error", "Import failed.", "error")
       if (fileKey) {
@@ -188,7 +190,7 @@ function ImportProducts(props: ImportProductsProps) {
       summary={getSummary()}
       onFileRemove={onFileRemove}
       processUpload={processUpload}
-      fileTitle={"products list"}
+      fileTitle={""}
       templateLink="/temp/product-import-template.csv"
       description2Title="Unsure about how to arrange your list?"
       description2Text="Download the template below to ensure you are following the correct format."
