@@ -1,6 +1,6 @@
 import React from "react"
 import { Toaster } from "react-hot-toast"
-import Sidebar from "../organisms/sidebar"
+import Sidebar from "../organisms/sidebar/index-new"
 import Topbar from "../organisms/topbar"
 import { PollingProvider } from "../../context/polling"
 
@@ -19,8 +19,8 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
       <PollingProvider>
         <div className="flex flex-col flex-1">
           <Topbar />
-          <div className="large:px-xlarge py-xlarge bg-grey-5 min-h-content overflow-y-auto">
-            <main className="xsmall:mx-base small:mx-xlarge medium:mx-4xlarge large:mx-auto large:max-w-7xl large:w-full h-full">
+          <div className="bg-white min-h-content overflow-y-auto">
+            <main className="w-full h-full font-architects">
               {children}
             </main>
           </div>

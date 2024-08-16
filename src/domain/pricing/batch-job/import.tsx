@@ -10,7 +10,7 @@ import {
   useAdminUploadFile,
 } from "medusa-react"
 
-import UploadModal from "../../../components/organisms/upload-modal"
+import UploadModal from "../../../components/organisms/upload-modal/index-new"
 import useNotification from "../../../hooks/use-notification"
 import { PollingContext } from "../../../context/polling"
 

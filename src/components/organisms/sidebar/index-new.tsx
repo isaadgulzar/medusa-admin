@@ -37,17 +37,11 @@ const Sidebar: React.FC = () => {
     isFeatureEnabled("stockLocationService")
 
   return (
-    <div className="h-screen overflow-y-auto border-r min-w-sidebar max-w-sidebar bg-gray-0 border-grey-20 py-base px-base">
+    <div className="h-screen overflow-y-auto bg-hex-22 text-white font-architects border-r min-w-sidebar max-w-sidebar bg-gray-0 border-grey-20">
       <div className="h-full">
-        <div className="flex justify-between px-2">
-          <div className="flex items-center justify-center w-8 h-8 border border-gray-300 border-solid rounded-circle">
-            <UserMenu />
-          </div>
-        </div>
-        <div className="flex flex-col px-2 my-base">
-          <span className="font-medium text-grey-50 text-small">Store</span>
-          <span className="font-medium text-grey-90 text-medium">
-            {store?.name} Hello world!
+        <div className="flex flex-col px-5 pt-5 pb-1 my-base">
+          <span className="text-sm">
+            {store?.name}
           </span>
         </div>
         <div className="py-3.5">
@@ -58,10 +52,16 @@ const Sidebar: React.FC = () => {
             text={"Orders"}
           />
           <SidebarMenuItem
-            pageLink={"/a/products"}
+            pageLink={"/a/catalog"}
             icon={<TagIcon size={ICON_SIZE} />}
-            text={"Products"}
+            text={"Catalog"}
             triggerHandler={triggerHandler}
+            subItems={[
+              {
+                pageLink: "/a/products",
+                text: "Products"
+              }
+            ]}
           />
           <SidebarMenuItem
             pageLink={"/a/customers"}
@@ -101,6 +101,11 @@ const Sidebar: React.FC = () => {
             triggerHandler={triggerHandler}
             text={"Settings"}
           />
+        </div>
+        <div className="flex justify-between px-2">
+          <div className="flex items-center justify-center w-8 h-8 border border-gray-300 border-solid rounded-circle">
+            <UserMenu />
+          </div>
         </div>
       </div>
     </div>

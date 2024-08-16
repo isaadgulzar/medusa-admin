@@ -50,6 +50,7 @@ module.exports = {
           90: "#831843",
         },
         orange: {
+          DEFAULT: "#F2890E",
           5: "#FFF7ED",
           10: "#FFEDD5",
           20: "#FED7AA",
@@ -146,6 +147,7 @@ module.exports = {
           90: "#064E3B",
         },
         blue: {
+          DEFAULT: "#6FABFF",
           5: "#EFF6FF",
           10: "#DBEAFE",
           20: "#BFDBFE",
@@ -161,6 +163,18 @@ module.exports = {
           start: "#7C53FF",
           stop: "#F796FF",
         },
+        hex: {
+          '22': '#222222',
+          '33': '#333333',
+          '44': '#444444',
+          '99': '#999999',
+          cc: '#CCCCCC',
+          ee: '#EEEEEE',
+          bb: '#BBBBBB',
+          f7: '#F7F7F7'
+        },
+        negative: '#E73F51',
+        light: '#BBBBBB',
       },
       heigth: {
         18: "4.5rem",
@@ -241,6 +255,7 @@ module.exports = {
           "sans-serif",
         ],
         mono: ["Roboto Mono", "Menlo", "monospace"],
+        architects: ['"Architects Daughter"', 'cursive'],
       },
       screens: {
         xsmall: "0px",
